@@ -1,0 +1,73 @@
+/* 3D Parallax Setup */
+body {
+    perspective: 1px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+section {
+    position: relative;
+    padding: 50px;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+    color: #fff;
+}
+
+/* Example of adding darker background colors */
+.div5content, .Skillss, .cert {
+    background-color: #0d0d0d; /* Darker background for sections */
+}
+
+/* Parallax Layers */
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateZ(-1px) scale(2); /* Creates the parallax effect */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* Animations */
+div, img, h1, p {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.fade-in {
+    opacity: 1 !important;
+}
+
+
+/* Specific section styles */
+#home {
+    background-color: #111; /* Dark */
+}
+
+#about {
+    background-color: #222; /* Darker */
+    background-image: url('Img/joshua-sukoff-9jBqWo7MgaU-unsplash.jpg'); /* Add parallax background */
+}
+
+#skills {
+    background-color: #333; /* Darkest */
+    background-image: url('Img/skills-bg.jpg'); /* Add parallax background */
+}
+
+#certtttexp {
+    background-color: #444; /* Dark with a slight gradient */
+    background-image: url('Img/cert-bg.jpg'); /* Add parallax background */
+}
+
+#portfolio {
+    background-color: #555; /* Slightly brighter */
+    background-image: url('Img/portfolio-bg.jpg'); /* Add parallax background */
+}
+
+#contacttt {
+    background-color: #666; /* Contrasting color */
+    background-image: url('Img/contact-bg.jpg'); /* Add parallax background */
+}
